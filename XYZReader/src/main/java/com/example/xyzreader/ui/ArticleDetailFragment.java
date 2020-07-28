@@ -153,10 +153,12 @@ public class ArticleDetailFragment extends Fragment implements
                     scrollRange = appBarLayout.getTotalScrollRange();
                 }
                 if (scrollRange + verticalOffset == 0) {
-                    isShow = true;
+                    mcollapsing_toolBar_layout_frag.setTitle(getString(R.string.app_name));
+                    isShow = false;
 
                 } else if (isShow) {
-                    isShow = false;
+                    mcollapsing_toolBar_layout_frag.setTitle(" ");
+                    isShow = true;
                 }
             }
         });
